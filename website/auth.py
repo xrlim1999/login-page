@@ -79,8 +79,8 @@ def register():
 
             session['username'] = username
             # return to homepage for new_user to log in
-            flash("Account successfully registered.", category="success")
-            return redirect(url_for('views.home'))
+            flash("Account successfully registered. Please log in to continue.", category="success")
+            return redirect(url_for('auth.login'))
 
     return render_template("register.html")
 
@@ -92,6 +92,6 @@ def logout():
 
     response = make_response(redirect(url_for("views.home")))
     response.headers["Cache-Control"] = "no-store"
-    
+
     flash("Logged out successfully", category="success")
     return response
