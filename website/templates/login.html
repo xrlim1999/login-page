@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+<!-- title -->
+{% block title %}Log in{% endblock %}
+
+<!-- webpage contents -->
+{% block contents %}
+
+<form method="POST">
+
+    <h3 align="center">Log in</h3>
+
+    <!-- Username -->
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="Enter Username"
+        />
+        <!-- "name" is passed to backend to be compiled -->
+    </div>
+    
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password1">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+        />
+    </div>
+
+    <!-- break-line (seperate button for styling) -->
+    <br />
+
+    <!-- [Submit] button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+{% endblock %}
+

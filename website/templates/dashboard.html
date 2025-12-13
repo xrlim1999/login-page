@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+<!-- title -->
+{% block title %}Dashboard{% endblock %}
+
+<!-- webpage contents -->
+{% block contents %}
+
+{% if current_user.is_authenticated %}
+    <h2>Welcome to your dashboard {{ current_user.username }}!</h2>
+{% else %}
+    Please log in.
+{% endif %}
+
+{% endblock%}
+
