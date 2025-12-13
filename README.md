@@ -18,12 +18,17 @@ login-page/
 ├── requirements.txt
 ├── README.md
 ├── website/
-│ ├── __init__.py
+│ ├── init.py
 │ ├── views.py
 │ ├── auth.py
 │ ├── models.py
 │ ├── constants.py
 │ ├── templates/
+│ │ ├── base.html
+│ │ ├── home.html
+│ │ ├── dashboard.html
+│ │ ├── register.html
+│ │ ├── login.html
 
 ## 🔧 Setup (macOS)
 ```bash
@@ -37,12 +42,14 @@ python3 -m venv venv
 source venv/bin/activate
 
 # install dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # run the application
-python main.py
+python3 main.py
+'''
 
 ## 🔧 Setup (Windows / Linux)
+```bash
 git clone https://github.com/xrlim1999/login-page.git
 cd login-page
 
@@ -52,7 +59,6 @@ python -m venv venv
 # activate virtual environment
 # Windows (PowerShell)
 venv\Scripts\activate
-
 # Linux
 source venv/bin/activate
 
@@ -61,6 +67,8 @@ pip install -r requirements.txt
 
 # run the application
 python main.py
+'''
 
 🌐 Running the Application
-Once the application has started running, open the browser on your local computer and navigate to: http://127.0.0.1:5000
+Once the application has started running, open the browser 
+on your local computer and navigate to: http://127.0.0.1:5000
