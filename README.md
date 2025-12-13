@@ -13,6 +13,7 @@ A simple Flask-based login application demonstrating user authentication with a 
 ---
 
 ## 📂 Project Structure
+```bash
 login-page/
 ├── main.py
 ├── requirements.txt
@@ -29,6 +30,7 @@ login-page/
 │ │ ├── dashboard.html
 │ │ ├── register.html
 │ │ ├── login.html
+```
 
 ## 🔧 Setup (macOS)
 ```bash
