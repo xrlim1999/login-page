@@ -11,6 +11,8 @@ views = Blueprint("views", __name__)
 @views.route('/', methods=['GET', 'POST'])
 def home():
 
+    # <<< homepage features >>>
+    
     return render_template("home.html")
 
 
@@ -18,5 +20,7 @@ def home():
 @views.route('/dashboard', methods=["GET", "POST"])
 @login_required
 def dashboard():
-    
+
+    # <<< dashboard features >>>
+
     return render_template("dashboard.html")

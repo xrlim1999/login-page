@@ -89,7 +89,9 @@ def register():
 @login_required
 def logout():
     logout_user()
+
     response = make_response(redirect(url_for("views.home")))
     response.headers["Cache-Control"] = "no-store"
+    
     flash("Logged out successfully", category="success")
     return response
