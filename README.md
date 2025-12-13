@@ -46,7 +46,7 @@ pip3 install -r requirements.txt
 
 # run the application
 python3 main.py
-'''
+```
 
 ## 🔧 Setup (Windows / Linux)
 ```bash
@@ -67,8 +67,8 @@ pip install -r requirements.txt
 
 # run the application
 python main.py
-'''
+```
 
-🌐 Running the Application
+## 🌐 Running the Application
 Once the application has started running, open the browser 
 on your local computer and navigate to: http://127.0.0.1:5000
