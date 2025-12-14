@@ -11,7 +11,7 @@ class User(db.Model, UserMixin):
     
     #$ sets password for new users
     def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+        self.password_hash = generate_password_hash(password) # default hashing method: "pbkdf2:sha256"
 
     ## checks user-input password to db during login
     def check_password(self, password):

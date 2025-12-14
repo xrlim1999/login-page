@@ -1,6 +1,9 @@
 # Login Page – Flask Application
 
-A simple Flask-based login application demonstrating user authentication with a backend database.
+A simple Flask-based login application featuring user authentication using the following setups:
+- frontend: HTML
+- backend: Flask
+- data storage: local database
 
 ---
 
@@ -19,7 +22,7 @@ login-page/
 ├── requirements.txt
 ├── README.md
 ├── website/
-│ ├── init.py
+│ ├── __init__.py
 │ ├── views.py
 │ ├── auth.py
 │ ├── models.py
@@ -73,4 +76,23 @@ python main.py
 
 ## 🌐 Running the Application
 Once the application has started running, open the browser 
-on your local computer and navigate to: http://127.0.0.1:5000
+on your local computer and navigate to URL: http://127.0.0.1:5000
+
+---
+
+## Implemented features
+
+- User registration, login, and logout
+- Password securely hashed using Werkzeug (pbkdf2:sha256) and verification
+- Session management
+
+---
+
+## Generative AI usage
+
+- Generative AI (ChatGPT) was utilised to assist in debugging, environment setup,
+  git setup, and documentation.
+- All implementation logic and final code decisions were made by the Author with
+  help and inspirations from online tutorials
+
+---
