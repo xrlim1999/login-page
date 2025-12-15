@@ -1,26 +1,33 @@
 """
-website.views script is meant for sites that can be views by users
-"""
-from flask import Blueprint, render_template
-from flask_login import login_required, current_user
+Frontend page routes for the application.
 
-# register views.py under Blueprint
+Defines public and authenticated views rendered as HTML templates.
+"""
+
+from flask import Blueprint, render_template
+from flask_login import login_required
+
+# Blueprint for frontend (page-rendering) routes
 views = Blueprint("views", __name__)
 
-# home (pre-login) page
 @views.route('/', methods=['GET', 'POST'])
 def home():
+    """
+    Home page (pre-login)
 
-    # <<< homepage features >>>
-    
+    This page is accessible to all users and serves as the entry point
+    before authentication.
+    """
+
     return render_template("home.html")
 
-
-# dashboard (post-login) page
 @views.route('/dashboard', methods=["GET", "POST"])
 @login_required
 def dashboard():
+    """
+    Dashboard page (post-login).
 
-    # <<< dashboard features >>>
+    Requires authentication and is only accessible to logged-in users.
+    """
 
     return render_template("dashboard.html")

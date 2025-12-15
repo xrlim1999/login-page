@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-<!-- title -->
+<!-- User register page -->
 {% block title %}Register{% endblock %}
 
-<!-- webpage contents -->
+<!-- Registration page content -->
 {% block contents %}
 
 <form method="POST">
 
     <h3 align="center">Register</h3>
 
-    <!-- Username -->
+    <!-- Account credentials submitted to backend via POST -->
     <div class="form-group">
         <label for="username">Username</label>
         <input
@@ -20,10 +20,8 @@
             name="username"
             placeholder="Enter Username"
         />
-        <!-- "name" is passed to backend to be compiled -->
     </div>
     
-    <!-- Password -->
     <div class="form-group">
         <label for="password1">Password</label>
         <input
@@ -34,6 +32,8 @@
             placeholder="Enter Password"
         />
     </div>
+    
+    <!-- Password confirmation field -->
     <div class="form-group">
         <label for="password2">Password (confirm)</label>
         <input
@@ -45,12 +45,9 @@
         />
     </div>
 
-    <!-- break-line (seperate button for styling) -->
     <br />
 
-    <!-- [Submit] button -->
     <button type="submit" class="btn btn-primary">Submit</button>
-
 </form>
 
 {% endblock %}

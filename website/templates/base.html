@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base layout template
+         Provides shared styling, navigation bar, and message handling -->
     
-    <!-- CSS bootstrap : styling -->
+    <!-- bootstrap CSS -->
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -17,11 +20,12 @@
     crossorigin="anonymous"
     />
     
+    <!-- Page-specific title -->
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
     
-    <!-- navigation toolbar -->
+    <!-- Navigation toolbar -->
     <nav class="navbar navbar-dark bg-dark">
         <button 
             class="navbar-toggler"
@@ -47,7 +51,7 @@
         </div>
     </nav>
 
-    <!-- flash messages for success/errors -->
+    <!-- Flash messages for success/errors -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             {% for category, message in messages %}
@@ -62,14 +66,13 @@
         {% endif %}
     {% endwith %}
     
-    <!-- main contents of webpage -->
-     <!-- enclosed in "container" to maintain formatting consistency with bootstrap -->
+    <!-- Page-specific content -->
     <div class="container">
         {% block contents %}
         {% endblock %}
     </div>
 
-    <!-- boostrap codes: button -->
+    <!-- Bootstrap Javascript dependencies -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
