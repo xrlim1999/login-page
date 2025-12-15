@@ -31,7 +31,7 @@ def login():
 
         # validation: empty fields
         if not username or not password:
-            flash("Please make sure that no fields are empty", category="error")
+            flash("Please make sure that no fields are empty.", category="error")
             return render_template("login.html")
 
         # retrieve user from database
@@ -65,7 +65,7 @@ def register():
 
         # validation: empty fields
         if not username or not password1 or not password2:
-            flash("Please make sure that no fields are empty", category="error")
+            flash("Please make sure that no fields are empty.", category="error")
             return render_template("register.html")
 
         # retrieve user from database
