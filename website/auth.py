@@ -29,6 +29,11 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
+        # validation: empty fields
+        if not username or not password:
+            flash("Please make sure that no fields are empty", category="error")
+            return render_template("login.html")
+
         # retrieve user from database
         user = User.query.filter_by(username=username).first()
         if user:
@@ -57,6 +62,11 @@ def register():
         username = request.form.get("username")
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
+
+        # validation: empty fields
+        if not username or not password1 or not password2:
+            flash("Please make sure that no fields are empty", category="error")
+            return render_template("register.html")
 
         # retrieve user from database
         user = User.query.filter_by(username=username).first()
